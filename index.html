@@ -14,27 +14,27 @@
         <img src="assets/images/profile.png" alt="profile" class="w-12 h-12 rounded-full ">
     </header>
     <!-- overflow hidden = stop scroll  -->
-            <div class="flex flex-col lg:flex-row gap-12  p-12  overflow-hidden flex-1">
-                <aside class="w-full lg:p-12 flex-1 p-8 border-gray-600 bg-[#111827]  rounded-2xl border-gray-600  ">
-                    <input id="search-input" type="search" placeholder="Recherche..."
-                    class="bg-gray-600 border rounded-lg w-full p-4 border-gray-800 mb-6">
-                    <select id="categorie-select" class="bg-gray-600 text-gray-100 rounded-lg w-full p-3 mb-4">
-                        <option value="all">Toutes les catégories</option>
-                    </select>
-                    <!-- overflow y-auto katkhalik t scroller up and down -->
+    <div class="flex flex-col lg:flex-row gap-12  p-12  overflow-hidden flex-1">
+        <aside class="w-full lg:p-12 flex-1 p-8 border-gray-600 bg-[#111827]  rounded-2xl border-gray-600  ">
+            <input id="search-input" type="search" placeholder="Recherche..."
+                class="bg-gray-600 border rounded-lg w-full p-4 border-gray-800 mb-6">
+            <select id="categorie-select" class="bg-gray-600 text-gray-100 rounded-lg w-full p-3 mb-4">
+                <option value="all">Toutes les catégories</option>
+            </select>
+            <!-- overflow y-auto katkhalik t scroller up and down -->
             <div id="channels-list" class="max-h-[60vh] overflow-y-auto overflow-x-hidden">
-
+            </div>
+            <div id="message"></div>
+        </aside>
+        <main class="flex-1 rounded-2xl border border-gray-600 bg-[#111827] p-10">
+            <div id="player-container">
+                <img id="player-logo" src="" alt="channel logo" class="w-full h-full object-contain">
             </div>
 
-                <main class="flex-1 rounded-2xl border border-gray-600 bg-[#111827] p-10">
-                    <div id="player-container">
-                        <img id="player-logo" src="" alt="channel logo" class="w-full h-full object-contain">
-                    </div>
-
-    <div class="border-t border-gray-700 pt-6 mt-6">
-        <h1 class="text-gray-400 text-xs font-bold uppercase mb-2 ">INFO AREA</h1>
-    </div>
-    </main>
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <h1 class="text-gray-400 text-xs font-bold uppercase mb-2 ">INFO AREA</h1>
+            </div>
+        </main>
     </div>
 
     <script src="./js/main.js" type="module"></script>
