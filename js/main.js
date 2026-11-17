@@ -1,8 +1,11 @@
 import { channels } from "./services/api.js";
 import { channelsList } from "./ui/sidebar.js";
 import { saveSelectId, loadSelectId } from "./utils/storage.js";
-
+import {showloading,hideloding} from "./ui/loading.js";
 import { filtre } from './ui/filtre.js';
+
+import { fav } from "./events/listeners.js";
+
 const searchInput = document.querySelector("#search-input");
 const categorySelect = document.querySelector("#categorie-select");
 const channelList = document.querySelector("#channels-list");
@@ -43,8 +46,10 @@ const playerLogo = document.querySelector('#player-logo');
 
             }
 
+
             async function fetchData() {
                 try {
+                    showloading();
                     allChannels = await channels();
                     fillCategories();
                     updateList();
@@ -52,7 +57,26 @@ const playerLogo = document.querySelector('#player-logo');
                 } catch (error) {
                     channelList.innerHTML = `<p class="text-red-400 text-center py-6">${error.message}</p>`;
 
+                }finally{
+                    hideloding();
                 }
             }
 
             fetchData();
+    fav();    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
